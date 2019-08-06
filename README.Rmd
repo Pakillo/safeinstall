@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![Codecov test coverage](https://codecov.io/gh/Pakillo/safeinstall/branch/master/graph/badge.svg)](https://codecov.io/gh/Pakillo/safeinstall?branch=master)
 <!-- badges: end -->
 
-The goal of `safeinstall` is to run some basic security checks before installing an R package from an online repository (like GitHub). This package is basically a wrapper of [defender](https://github.com/ropenscilabs/defender) that runs some checks before running `remotes::install_github`. 
+The goal of `safeinstall` is to run some basic security checks before installing an R package from an online repository (like GitHub). This package is basically a wrapper of [defender](https://github.com/ropenscilabs/defender) so that some security checks are done before running `remotes::install_github`. 
 
 ## Installation
 
@@ -33,16 +33,36 @@ remotes::install_github("Pakillo/safeinstall")
 library(safeinstall)
 ```
 
-`safe_install_github` will run some checks before installing the package. If nothing is detected, the package is installed.
+`safe_install_github` is like `remotes::install_github` but will run some checks before installing the package. If nothing wrong is detected, the package is installed.
 
 ```{r eval=FALSE}
 safe_install_github("Pakillo/safeinstall")
 ```
 
-In contrast, the package will not install if potentially unsafe code is detected.
+In contrast, if potentially unsafe code is detected (e.g. system calls), the package will not install and an error will be returned.
 
 ```{r eval=TRUE, error=TRUE}
 safe_install_github("ropenscilabs/testevil")
 ```
 
+
+### Checking any git repository
+
+To just scan a package (without installing), run `check_package` on the git repository:
+
+```{r}
+check_package("https://github.com/Pakillo/safeinstall.git")
+```
+
+Will return TRUE if no problem is found, or FALSE (plus info on potential problems) otherwise:
+
+```{r}
+check_package("https://github.com/ropenscilabs/testevil.git")
+```
+
+This works with any git repository (not only GitHub), e.g. on Gitlab:
+
+```{r}
+check_package("https://gitlab.com/jimhester/covr.git")
+```
 

@@ -54,7 +54,7 @@ check_package <- function(repo = NULL, verbose = TRUE) {
   test1 <- defender::summarize_system_calls(temp.dir)
 
   if (nrow(test1) > 0 & isTRUE(verbose)) {
-    message("System calls found:\n")
+    message("\n\nSystem calls found:\n")
     print(test1)
   }
 
@@ -62,7 +62,7 @@ check_package <- function(repo = NULL, verbose = TRUE) {
   test2 <- defender::check_namespace(temp.dir)
 
   if (nrow(test2) > 0 & isTRUE(verbose)) {
-    message("Dangerous imports found:\n")
+    message("\n\nDangerous imports found:\n")
     print(test2)
   }
 
