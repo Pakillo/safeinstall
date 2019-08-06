@@ -20,7 +20,9 @@ If no unsafe code is detected, the package is installed. Otherwise, an error mes
 Safe installation of R packages from GitHub
 }
 \examples{
+\dontrun{
 library(safeinstall)
 safe_install_github("Pakillo/safeinstall")
 safe_install_github("ropenscilabs/testevil")
+}
 }

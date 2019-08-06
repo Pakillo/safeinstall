@@ -8,9 +8,11 @@
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' library(safeinstall)
 #' safe_install_github("Pakillo/safeinstall")
 #' safe_install_github("ropenscilabs/testevil")
+#' }
 
 safe_install_github <- function(user.repo = NULL, ..., verbose = TRUE) {
 
@@ -35,9 +37,11 @@ safe_install_github <- function(user.repo = NULL, ..., verbose = TRUE) {
 #' @export
 #'
 #' @examples
+#' \dontrun{
 #' library(safeinstall)
 #' check_package("https://github.com/Pakillo/safeinstall.git")
 #' check_package("https://github.com/ropenscilabs/testevil.git")
+#' }
 check_package <- function(repo = NULL, verbose = TRUE) {
 
   # clone repo locally

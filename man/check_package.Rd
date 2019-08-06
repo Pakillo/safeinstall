@@ -18,7 +18,9 @@ TRUE if the package passes the security checks, otherwise FALSE (and some extra 
 Check a package repository for potential security issues
 }
 \examples{
+\dontrun{
 library(safeinstall)
 check_package("https://github.com/Pakillo/safeinstall.git")
 check_package("https://github.com/ropenscilabs/testevil.git")
+}
 }
