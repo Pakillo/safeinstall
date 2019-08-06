@@ -18,5 +18,7 @@ Imports:
     git2r,
     remotes,
     defender (>= 0.0.1.9000)
-Remotes:  
+Remotes: 
     ropenscilabs/defender
+Suggests: 
+    testthat (>= 2.1.0)
