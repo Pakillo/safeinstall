@@ -7,6 +7,8 @@
 
 [![Travis build
 status](https://travis-ci.org/Pakillo/safeinstall.svg?branch=master)](https://travis-ci.org/Pakillo/safeinstall)
+[![Codecov test
+coverage](https://codecov.io/gh/Pakillo/safeinstall/branch/master/graph/badge.svg)](https://codecov.io/gh/Pakillo/safeinstall?branch=master)
 <!-- badges: end -->
 
 The goal of `safeinstall` is to run some basic security checks before
