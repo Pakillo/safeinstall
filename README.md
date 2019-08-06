@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+[![Travis build
+status](https://travis-ci.org/Pakillo/safeinstall.svg?branch=master)](https://travis-ci.org/Pakillo/safeinstall)
 <!-- badges: end -->
 
 The goal of `safeinstall` is to run some basic security checks before
