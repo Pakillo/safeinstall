@@ -41,9 +41,8 @@ safe_install_github("Pakillo/safeinstall")
 
 In contrast, the package will not install if potentially unsafe code is detected.
 
-```{r eval=FALSE}
+```{r eval=TRUE, error=TRUE}
 safe_install_github("ropenscilabs/testevil")
 ```
 
-> Error in safe_install_github("ropenscilabs/testevil") : 
-  There might be some unsafe code in this repository. It is advised to inspect it more thoroughly before installing (e.g. try defender package: https://github.com/ropenscilabs/defender).
+
