@@ -1,0 +1,43 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# safeinstall
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of safeinstall is to run some basic security checks before installing an R package from an online repository (like GitHub). This package is basically a wrapper of [defender](https://github.com/ropenscilabs/defender) that runs some checks before running `remotes::install_github`. 
+
+## Installation
+
+``` r
+devtools::install_github("Pakillo/safeinstall")
+```
+
+## Usage
+
+`safe_install_github` will run some checks before installing the package. If nothing is detected, the package is installed.
+
+```{r eval=FALSE}
+library(safeinstall)
+
+safe_install_github("Pakillo/safeinstall")
+```
+
+In contrast, the package will not install if malicious/unsafe code is potentially detected.
+
+```{r eval=FALSE}
+safe_install_github("ropenscilabs/testevil")
+```
+

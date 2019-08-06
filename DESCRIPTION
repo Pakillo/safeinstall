@@ -1,0 +1,14 @@
+Package: safeinstall
+Title: Run some basic security checks before installing R packages from online repositories
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Francisco",
+           family = "Rodriguez-Sanchez",
+           role = c("aut", "cre"),
+           email = "f.rodriguez.sanc@gmail.com")
+Description: Run some basic security checks before installing R packages from online repositories.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 6.1.1
